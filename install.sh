@@ -18,11 +18,17 @@ echo "installing development apps"
 brew cask install adoptopenjdk
 brew cask install docker
 brew cask install iterm2
+brew install docker-compose
 brew install zsh
 
 echo "installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 upgrade_oh_my_zsh
+
+echo "installing google cloud sdk"
+brew cask install google-cloud-sdk
+echo '\nexport PATH=/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH' >> ~/.zshrc
+source ~/.zshrc
 
 echo "installing asdf"
 brew install asdf
