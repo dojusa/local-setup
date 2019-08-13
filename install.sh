@@ -42,6 +42,7 @@ mkdir -p ~/workspace/go
 #echo '\nexport GOROOT=$ASDFINSTALLS/golang/$GOV/go' >> ~/.zshrc
 echo '\nexport GOPATH=$HOME/workspace/go' >> ~/.zshrc
 echo '\nexport PATH=$PATH:$GOPATH/bin' >> ~/.zshrc
+source ~/.zshrc
 
 asdf plugin-add erlang
 asdf install erlang 22.0
