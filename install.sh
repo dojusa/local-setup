@@ -38,10 +38,14 @@ asdf install golang 1.12
 asdf global golang 1.12
 
 mkdir -p ~/workspace/go
-echo "\nGOV=$(asdf current golang | awk '{print $1}')" >> ~/.zshrc
-# echo '\nexport GOROOT=$ASDFINSTALLS/golang/$GOV/go' >> ~/.zshrc
+#echo "\nGOV=$(asdf current golang | awk '{print $1}')" >> ~/.zshrc
+#echo '\nexport GOROOT=$ASDFINSTALLS/golang/$GOV/go' >> ~/.zshrc
 echo '\nexport GOPATH=$HOME/workspace/go' >> ~/.zshrc
 echo '\nexport PATH=$PATH:$GOPATH/bin' >> ~/.zshrc
 
 asdf plugin-add erlang
+asdf install erlang 22.0
+asdf global erlang 22.0
+
 asdf plugin-add elixir
+asdf global elixir 1.9.1-otp-22
