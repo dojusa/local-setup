@@ -56,3 +56,8 @@ asdf global erlang 22.0
 
 asdf plugin-add elixir
 asdf global elixir 1.9.1-otp-22
+
+echo "configuring global .gitignore"
+touch ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+echo '\n*.elixir_ls/' >> ~/.gitignore_global
