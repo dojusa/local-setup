@@ -38,7 +38,7 @@ echo '\nexport ASDFROOT=$HOME/.asdf' >> ~/.zshrc
 echo '\nexport ASDFINSTALLS=$HOME/.asdf/installs' >> ~/.zshrc
 source ~/.zshrc
 
-echo "installing programming languages"
+echo "installing golang"
 asdf plugin-add golang
 asdf install golang 1.12
 asdf global golang 1.12
@@ -50,12 +50,17 @@ echo '\nexport GOPATH=$HOME/workspace/go' >> ~/.zshrc
 echo '\nexport PATH=$PATH:$GOPATH/bin' >> ~/.zshrc
 source ~/.zshrc
 
+echo "installing erlang and elixir"
 asdf plugin-add erlang
 asdf install erlang 22.0
 asdf global erlang 22.0
 
 asdf plugin-add elixir
 asdf global elixir 1.9.1-otp-22
+
+echo "installing pip"
+sudo easy_install pip
+sudo pip install --upgrade pip
 
 echo "configuring global .gitignore"
 touch ~/.gitignore_global
