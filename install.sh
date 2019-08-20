@@ -66,3 +66,6 @@ echo "configuring global .gitignore"
 touch ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 echo '\n**/.elixir_ls/' >> ~/.gitignore_global
+
+echo "configuring global pull.rebase true"
+git config --global pull.rebase true
