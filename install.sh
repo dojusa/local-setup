@@ -5,7 +5,7 @@ echo "instaling xcode tool belt"
 xcode-select --install
 
 echo "installing brew"
-ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "installing relevant apps"
 brew cask install google-chrome
@@ -44,8 +44,6 @@ asdf install golang 1.12
 asdf global golang 1.12
 
 mkdir -p ~/workspace/go
-#echo "\nGOV=$(asdf current golang | awk '{print $1}')" >> ~/.zshrc
-#echo '\nexport GOROOT=$ASDFINSTALLS/golang/$GOV/go' >> ~/.zshrc
 echo '\nexport GOPATH=$HOME/workspace/go' >> ~/.zshrc
 echo '\nexport PATH=$PATH:$GOPATH/bin' >> ~/.zshrc
 source ~/.zshrc
@@ -56,6 +54,7 @@ asdf install erlang 22.0
 asdf global erlang 22.0
 
 asdf plugin-add elixir
+asdf install elixir 1.9.1-otp-22
 asdf global elixir 1.9.1-otp-22
 
 echo "installing pip"
