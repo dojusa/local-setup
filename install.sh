@@ -9,6 +9,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 echo "installing relevant apps"
 brew cask install google-chrome
+brew cask install firefox
 brew cask install slack
 brew cask install spectacle
 brew cask install visual-studio-code
@@ -18,6 +19,7 @@ echo "installing development apps"
 brew cask install adoptopenjdk
 brew cask install docker
 brew cask install iterm2
+brew install openssl
 brew install docker-compose
 brew install zsh
 
@@ -50,7 +52,7 @@ source ~/.zshrc
 
 echo "installing erlang and elixir"
 asdf plugin-add erlang
-asdf install erlang 22.0
+ERLANG_OPENSSL_PATH="/usr/local/opt/openssl" asdf install erlang 22.0
 asdf global erlang 22.0
 
 asdf plugin-add elixir
