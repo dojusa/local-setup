@@ -21,6 +21,8 @@ brew cask install docker
 brew cask install iterm2
 brew install openssl
 brew install docker-compose
+brew install protobuf
+brew install wget
 brew install zsh
 
 echo "installing Oh My Zsh"
