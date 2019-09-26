@@ -23,11 +23,17 @@ brew install openssl
 brew install docker-compose
 brew install protobuf
 brew install wget
+brew install hub
 brew install zsh
 
 echo "installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 upgrade_oh_my_zsh
+
+echo "adding alias"
+echo 'alias zshconfig="nano ~/.zshrc"' >> ~/.zshrc
+echo 'alias zshsource="source ~/.zshrc"' >> ~/.zshrc
+echo 'alias git="hub"' >> ~/.zshrc
 
 echo "installing jump"
 brew install jump
