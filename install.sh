@@ -29,6 +29,10 @@ echo "installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 upgrade_oh_my_zsh
 
+echo "installing jump"
+brew install jump
+echo '\neval "$(jump shell)"' >> ~/.zshrc
+
 echo "installing google cloud sdk"
 brew cask install google-cloud-sdk
 echo '\nexport PATH=/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH' >> ~/.zshrc
