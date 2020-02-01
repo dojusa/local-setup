@@ -25,6 +25,8 @@ brew install protobuf
 brew install wget
 brew install hub
 brew install zsh
+brew install autoconf
+brew install wxmac
 
 echo "installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
