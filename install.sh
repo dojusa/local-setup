@@ -84,6 +84,7 @@ echo '\n**/.elixir_ls/' >> ~/.gitignore_global
 
 echo "configuring global pull.rebase true"
 git config --global pull.rebase true
+git config --global alias.pushf "push --force-with-lease"
 
 echo "configuring diff-so-fancy"
 brew install diff-so-fancy
